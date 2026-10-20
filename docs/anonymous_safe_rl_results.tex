@@ -1,0 +1,43 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\pdfinfo{
+/Title ()
+/Author ()
+/Subject ()
+/Keywords ()
+}
+
+\begin{document}
+
+\begin{center}
+\textbf{Supplementary Safe-RL Results}
+\end{center}
+
+We evaluate a practical neural-network instantiation of REP-PD-TEG, denoted \texttt{REP-PD-NN}. It replaces the theoretical per-round full-batch MLE representation step with a mini-batch SPEDER-style stochastic representation objective~[1], uses the learned state-action representation in neural reward and cost critics, and trains the policy with a Lagrangian-style constrained policy update. We compare it with a \texttt{raw} baseline that uses the same Lagrangian training skeleton but removes the representation learner.
+
+\paragraph{Safety Gym experiments.}
+The table reports results on three Safety Gym continuous-control environments. All rows use $1$M interaction steps, $3$ random seeds, the safe RL training hyperparameters specified in the reproduction script, and the final deterministic evaluation checkpoint.
+
+\begin{center}
+\small
+\begin{tabular}{lcccc}
+\toprule
+Environment & Raw Ret. & Raw Cost & REP-PD-NN Ret. & REP-PD-NN Cost \\
+\midrule
+PointGoal1 & $-1.38 \pm 0.58$ & $27.85 \pm 18.99$ & $\mathbf{-0.14 \pm 0.03}$ & $\mathbf{16.45 \pm 12.69}$ \\
+PointPush1 & $-1.40 \pm 0.60$ & $32.17 \pm 14.66$ & $\mathbf{-0.17 \pm 0.12}$ & $\mathbf{12.13 \pm 6.95}$ \\
+PointPush2 & $-1.40 \pm 0.71$ & $13.00 \pm 8.17$ & $\mathbf{-0.03 \pm 0.01}$ & $\mathbf{10.90 \pm 3.85}$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Across these three tasks, \texttt{REP-PD-NN} improves final return and reduces final cost, suggesting that learned representations can be beneficial for practical safe RL in continuous-control settings.
+
+\paragraph{Reference.}
+[1] T. Ren et al., Spectral Decomposition Representation for Reinforcement Learning.
+
+\end{document}

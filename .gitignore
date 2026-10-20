@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+*.aux
+*.log
+*.out
+*.fls
+*.fdb_latexmk
+outputs/
+logs/
+*.pt
+*.pth
+*.ckpt
+.venv/
+.pytest_cache/
+.DS_Store
