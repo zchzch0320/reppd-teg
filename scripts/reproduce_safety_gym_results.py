@@ -96,13 +96,6 @@ def render_tex(rows: list[dict[str, str]]) -> str:
 \usepackage{{booktabs}}
 \usepackage[T1]{{fontenc}}
 \usepackage[utf8]{{inputenc}}
-\pdfinfo{{
-/Title ()
-/Author ()
-/Subject ()
-/Keywords ()
-}}
-
 \begin{{document}}
 
 \begin{{center}}
