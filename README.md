@@ -69,6 +69,10 @@ This formats the supplied aggregate CSV without rerunning training. The included
 
 The values above are recorded in `results/safety_gym_results.csv`. Use the aggregation script to compute the same metrics from new runs.
 
+## License
+
+This code is released under the [MIT License](LICENSE).
+
 ## Citation
 
 If you use this code or its results, please cite the paper:
