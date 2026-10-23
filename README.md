@@ -25,7 +25,7 @@ Use a dedicated Python environment with PyTorch and the **legacy** Safety Gym `S
 python -m pip install -r requirements.txt
 ```
 
-`requirements.txt` lists package names, not a tested lockfile; reproduction may require resolving legacy Gym/MuJoCo compatibility for the local OS. Safety-Gymnasium tasks are not interchangeable with the reported `Safexp-*` environments. Each full run was performed on one RTX 4090 GPU (24 GB). The tests and result-rendering commands below need neither Safety Gym nor a GPU.
+Install the dependencies in `requirements.txt` with versions compatible with legacy Gym and MuJoCo on your OS. Safety-Gymnasium tasks are not interchangeable with the reported `Safexp-*` environments. Each full run was performed on one RTX 4090 GPU (24 GB). The tests and result-rendering commands below need neither Safety Gym nor a GPU.
 
 ## Reproduction
 
