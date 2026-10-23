@@ -1,6 +1,6 @@
 # REP-PD Experimental Reproduction Package
 
-This repository contains code and reported results for the practical neural Safety Gym experiments in the REP-PD low-rank CMDP paper. The neural training code is an empirical adaptation, **not** an implementation of the paper's stochastic-oracle algorithm or its theoretical guarantees.
+This repository contains the experimental code and reported results accompanying [*Primal-Dual Representation Learning for Low-Rank Constrained MDPs*](https://arxiv.org/abs/2610.30756). It implements the paper's practical neural Safety Gym experiments. The neural training code is an empirical adaptation, **not** an implementation of the paper's stochastic-oracle algorithm or its theoretical guarantees.
 
 ## Contents
 
@@ -77,6 +77,21 @@ The paper reports approximately 8--20 hours per Safety Gym run on one RTX 4090, 
 
 - No software license has been selected yet. Public visibility alone does not grant open-source reuse rights; the authors should add an agreed license after confirming publication rights for the code.
 - Add original seed-level logs and exact package versions if they can be recovered; they are absent from the current package.
-- Add author/citation metadata once the paper is no longer anonymous.
 
 The representation objective is inspired by Ren et al., *Spectral Decomposition Representation for Reinforcement Learning*. The benchmark uses the original Safety Gym `Safexp-*` tasks.
+
+## Citation
+
+If you use this code or its results, please cite the paper:
+
+```bibtex
+@misc{zhou2026primaldual,
+  title         = {Primal-Dual Representation Learning for Low-Rank Constrained MDPs},
+  author        = {Chenhao Zhou and Chao Zhang and Wensong Bai and Hanbin Zhao and Hui Qian},
+  year          = {2026},
+  eprint        = {2610.30756},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.LG},
+  url           = {https://arxiv.org/abs/2610.30756}
+}
+```
