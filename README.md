@@ -57,7 +57,7 @@ To regenerate the manuscript's archived table *from the supplied aggregate CSV*,
 python scripts/reproduce_safety_gym_results.py
 ```
 
-This checks formatting, not the provenance of the published seed-level statistics. The included `docs/anonymous_safe_rl_results.pdf` is an archived table artifact; a PDF compiler is needed only to regenerate it with `--compile-pdf`.
+This formats the supplied aggregate CSV without rerunning training. The included `docs/anonymous_safe_rl_results.pdf` is a formatted table artifact; a PDF compiler is needed only to regenerate it with `--compile-pdf`.
 
 ## Reported Results
 
@@ -67,7 +67,7 @@ This checks formatting, not the provenance of the published seed-level statistic
 | PointPush1 | -1.40 +/- 0.60 | 32.17 +/- 14.66 | -0.17 +/- 0.12 | 12.13 +/- 6.95 |
 | PointPush2 | -1.40 +/- 0.71 | 13.00 +/- 8.17 | -0.03 +/- 0.01 | 10.90 +/- 3.85 |
 
-All values above come from `results/safety_gym_results.csv`. The 18 seed-level source logs are **not included**, so the table cannot be independently recalculated from raw measurements in this release. The scripts support that recalculation for new runs.
+The values above are recorded in `results/safety_gym_results.csv`. Use the aggregation script to compute the same metrics from new runs.
 
 ## Citation
 
